@@ -15,7 +15,7 @@ export function renderPaymentSummary() {
     });
 
     const totalBeforeTax = productPrice + shippingPrice;
-    const tax = totalBeforeTax * 0.1;
+    const tax = Number((totalBeforeTax * 0.1).toFixed(2));
     const total = totalBeforeTax + tax;
 
     const paymentSummaryHTML = `
